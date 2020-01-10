@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>React Hello World</title>
+  <title>Sally Student Resume - React Version</title>
 </head>
 <body>
   <div id="application-root"></div>
@@ -17,21 +17,125 @@
     src="https://unpkg.com/react-dom@16/umd/react-dom.development.js">
   </script>
   <script type="text/babel">
-function App(props) {
-  return (
-    <header>
-      {props.children}
-    </header>
-  );
-}
+    function App(props) {
+      return (
+        <main>
+          <header>
+            <h1>{props.studentName}</h1>
+            <h2>Title, Industry</h2>
+            <address>
+              <ul>
+                <li>sally.student@gmail.com</li>
+                <li>(652)698-2615</li>
+                <li>linkedin.com/sallystudent</li>
+                <li>@sallystudent</li>
+                <li>sallystudent.com</li>
+              </ul>
+              <img src="http://www.bestlegalassistant.com/wp-content/uploads/2014/08/Businesswoman-Stock-Photo-e1409552269886.jpg" alt="Picture of Sally Student">
+              </img>
+            </address>
+          </header>
 
-// Nested elements inside the App
-ReactDOM.render(
-  <App className='my-class'>
-    <h1>Current Page Title!</h1>
-  </App>,
-  document.querySelector('#application-root')
-);
+          <hr></hr>
+
+          <section>
+            <h3>Employment</h3>
+            
+            <article>   
+              <h4>job1<br></br>
+                title<br></br>
+                xx/xx/xxxx - yy/yy/yyyy
+              </h4>
+              <ul>
+                <li>achievement 1</li>
+                <li>achievement 2</li>
+                <li>achievement 3</li>
+              </ul>
+            </article>
+            <article>   
+              <h4>job2<br></br>
+                title<br></br>
+                xx/xx/xxxx - yy/yy/yyyy
+              </h4>
+              <ul>
+                <li>achievement 1</li>
+                <li>achievement 2</li>
+                <li>achievement 3</li>
+              </ul>
+            </article>
+          </section>
+
+          <hr></hr>
+
+          <section>
+            <h3>Education</h3>
+            <article>   
+              <h4>University Name<br></br>
+                Degree<br></br>
+                xx/xx/xxxx - yy/yy/yyyy
+              </h4>
+              <ul>
+                <li>achievement 1</li>
+                <li>achievement 2</li>
+                <li>achievement 3</li>
+              </ul>
+            </article>
+            <article>   
+              <h4>Trade Schoole Name<br></br>
+                Certification<br></br>
+                xx/xx/xxxx - yy/yy/yyyy
+              </h4>
+              <ul>
+                <li>achievement 1</li>
+                <li>achievement 2</li>
+                <li>achievement 3</li>
+              </ul>
+            </article>
+          </section>
+
+          <hr></hr>
+
+          <aside>
+            <h3>Projects</h3>
+            <article>
+              <h4>project1</h4>
+              <p>title<br></br>
+                xx/xx/xxxx - yy/yy/yyyy<br></br>
+              </p>
+              <p>description & achievements</p>
+            </article>
+            <article>
+              <h4>Project2</h4>
+              <p>title<br></br>
+                xx/xx/xxxx - yy/yy/yyyy<br></br>
+              </p>
+              <p>description & achievements</p>
+            </article>
+            <article>
+              <h4>Project3</h4>
+              <p>title<br></br>
+                xx/xx/xxxx - yy/yy/yyyy<br></br>
+              </p>
+              <p>description & achievements</p>
+            </article>
+          </aside>
+
+          <hr></hr>
+
+          <footer>
+          <p>Made with semantic html</p>
+        </footer>
+        </main>
+      );
+    }
+
+    // Nested elements inside the App
+    ReactDOM.render(
+      <App 
+        studentName="Name From Props"
+      />,
+      document.querySelector('#application-root')
+    );
   </script>
 </body>
 </html>
